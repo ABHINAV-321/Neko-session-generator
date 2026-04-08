@@ -1,0 +1,3 @@
+[store] Redis env vars not found, using in-memory store (WARNING: data lost on restart)
+🚀 Server running on port 3000
+📍 Local: http://localhost:3000

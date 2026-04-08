@@ -1,0 +1,34 @@
+{
+  "name": "whatsapp-session-generator",
+  "version": "1.0.0",
+  "description": "Generate WhatsApp session files for Baileys bots",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "build": "mkdir -p .vercel/output/static && cp -r public/* .vercel/output/static/",
+    "test": "node test-api.js"
+  },
+  "keywords": [
+    "whatsapp",
+    "baileys",
+    "session",
+    "generator"
+  ],
+  "author": "Abhinav T S",
+  "license": "MIT",
+  "dependencies": {
+    "@upstash/redis": "^1.37.0",
+    "@vercel/blob": "^2.3.3",
+    "@vercel/functions": "^3.4.3",
+    "@whiskeysockets/baileys": "6.7.21",
+    "cors": "^2.8.5",
+    "express": "^4.22.1",
+    "pino": "^9.0.0",
+    "qrcode": "^1.5.4",
+    "sharp": "^0.34.5",
+    "uuid": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

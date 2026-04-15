@@ -1,0 +1,20 @@
+services:
+- type: web
+  name: whatsapp-session-generator
+  env: node
+  buildCommand: npm ci --only=production
+  startCommand: node server.js
+  envVars:
+  - key: NODE_ENV
+    value: production
+  - key: UPSTASH_REDIS_REST_URL
+    fromDatabase:
+      name: whatsapp-sessions-redis
+      property: connectionString
+  - key: UPSTASH_REDIS_REST_TOKEN
+    fromDatabase:
+      name: whatsapp-sessions-redis
+      property: password
+- type: redis
+  name: whatsapp-sessions-redis
+  plan: free

@@ -1,4 +1,4 @@
-# SILVA - WhatsApp Session Generator
+# NEKO - WhatsApp Session Generator
 
 Full-stack web application for generating WhatsApp session files with a cyberpunk-themed UI.
 
@@ -46,8 +46,8 @@ On successful connection:
 ## Using Session in Your Bot
 
 ### Option 1: Compressed Session String
-The downloaded `.txt` file contains `SILVA-<base64>`. Use it as:
-- Environment variable: `SESSION_ID="SILVA-..."`
+The downloaded `.txt` file contains `NEKO-<base64>`. Use it as:
+- Environment variable: `SESSION_ID="NEKO-..."`
 - Or decode and write `auth_info_baileys` files manually
 
 ### Option 2: Downloaded Files
@@ -157,5 +157,5 @@ MIT
 
 ---
 
-**Powered by [Baileys](https://github.com/whiskeysockets/baileys) | Cyberpunk UI by SILVA**
+**Powered by [Baileys](https://github.com/whiskeysockets/baileys) | Cyberpunk UI by NEKO**
 

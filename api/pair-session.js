@@ -195,14 +195,6 @@ export default async function handler(req, res) {
         }
       });
 
-      sock.ev.on('creds.update', async (updatedCreds) => {
-        if (saveCreds) saveCreds(updatedCreds);
-        const session = await getSession(sessionId);
-        if (session) {
-          session.state = { ...session.state, ...updatedCreds };
-          await setSession(sessionId, session);
-        }
-      });
 
       sock.ev.on('close', () => {
         console.log(`[PAIR] Socket closed`);
